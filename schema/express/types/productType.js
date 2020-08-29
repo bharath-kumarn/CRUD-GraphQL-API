@@ -1,3 +1,4 @@
+//typeDefs for Product Schema
 const typeDefs = `
 type Product {
   productCode: String
@@ -16,14 +17,14 @@ type Query {
 }
 type Mutation {
   createProduct(
-    productCode: Int, productName: Int,
+    productCode: String, productName: String,
      productLine: String,
      productScale: String,productVendor: String,
      productDescription: String,quantityInStock: String,
      buyPrice: String,MSRP: String
   ): Product
   updateProduct(
-    productCode: Int, productName: Int,
+    productCode: String, productName: String,
      productLine: String,
      productScale: String,productVendor: String,
      productDescription: String,quantityInStock: String,

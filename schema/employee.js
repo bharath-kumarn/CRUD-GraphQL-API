@@ -2,7 +2,7 @@ const { makeExecutableSchema } = require('graphql-tools');
 const typeDefs = require('./express/types/employeeType');
 const resolvers = require('./express/resolvers/employeeResolver');
 
-console.log("Im in Employee")
+console.log("/employee")
 
 const schema = makeExecutableSchema({
     typeDefs,

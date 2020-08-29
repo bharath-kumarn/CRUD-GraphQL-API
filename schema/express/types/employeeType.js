@@ -1,3 +1,4 @@
+//typeDefs for Employee Schema
 const typeDefs = `
 type Employee {
     employeeNumber: String
@@ -26,7 +27,6 @@ type Mutation {
     email: String,officeCode: String,
     reportsTo: String,jobTitle: String): Employee
   deleteEmployee(employeeNumber: String): Employee
-
 }
 
 schema {
@@ -34,5 +34,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs

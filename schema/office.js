@@ -2,7 +2,7 @@ const { makeExecutableSchema } = require('graphql-tools');
 const typeDefs = require('./express/types/officeType');
 const resolvers = require('./express/resolvers/officeResolver');
 
-console.log("Im in Office")
+console.log("/office")
 
 const schema = makeExecutableSchema({
     typeDefs,

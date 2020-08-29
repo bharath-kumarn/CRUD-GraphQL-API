@@ -1,3 +1,4 @@
+//typeDefs for Productline Schema
 const typeDefs = `
 type Productline {
     productLine: String
@@ -19,7 +20,6 @@ type Mutation {
     productLine: String, textDescription: String,
     htmlDescription: String, image: String): Productline
   deleteProductline(productLine: String): Productline
-
 }
 
 schema {
@@ -27,5 +27,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs

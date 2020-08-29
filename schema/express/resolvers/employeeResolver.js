@@ -1,7 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
-
 const db = new sqlite3.Database("./data.sqlite");
-
+//resolvers for Employee Schema
 const resolvers = {
     Query: {
         employees: (root, args, context) => {
@@ -13,10 +12,8 @@ const resolvers = {
                               }
                               resolve(rows);
                           });
-          });
-                      
-        },
-        
+          });                   
+        },   
     },
 
     Mutation: {
@@ -30,8 +27,7 @@ const resolvers = {
                         console.log("error",err)
                           reject(null);
                       }
-                          console.log("resolved")
-  
+                          console.log("resolved") 
                       db.get("SELECT last_insert_rowid() as id", (err, row) => {
                           resolve({
                               id: row["id"],
@@ -101,5 +97,4 @@ const resolvers = {
   
     }
   }
-
-  module.exports=resolvers
+module.exports=resolvers

@@ -1,3 +1,4 @@
+//typeDefs for Payment Schema
 const typeDefs = `
 type Payment {
     customerNumber: String
@@ -19,7 +20,6 @@ type Mutation {
     customerNumber: String, checkNumber: String,
     paymentDate: String, amount: String): Payment
   deletePayment(customerNumber: String): Payment
-
 }
 
 schema {
@@ -27,5 +27,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs

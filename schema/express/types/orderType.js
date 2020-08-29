@@ -1,3 +1,4 @@
+//typeDefs for Order Schema
 const typeDefs = `
 type Order {
     orderNumber: String
@@ -7,7 +8,6 @@ type Order {
     status: String
     comments: String
     customerNumber: String
-
 }
 
 type Query {
@@ -26,7 +26,6 @@ type Mutation {
     status: String,comments: String,
     customerNumber: String): Order
   deleteOrder(orderNumber: String): Order
-
 }
 
 schema {
@@ -34,5 +33,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs

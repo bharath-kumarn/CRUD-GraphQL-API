@@ -1,7 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
-
 const db = new sqlite3.Database("./data.sqlite");
-
+//resolvers for Customer Schema
 const resolvers = {
     Query: {
         customers: (root, args, context) => {
@@ -13,13 +12,10 @@ const resolvers = {
                               }
                               resolve(rows);
                           });
-          });
-                      
-        },
-        
+          });                      
+        },       
     },
     Mutation: {
-
   createCustomer: (_, { customerNumber, salesRepEmployeeNumber, phone, customerName, contactLastName,contactFirstName, addressLine1, addressLine2, city, state, postalCode,country, creditLimit }, context) => {
     return new Promise((resolve, reject) => {
     console.log(`${customerName}`)
@@ -99,7 +95,6 @@ const resolvers = {
                     });
       })
     },
-  
     }
   }
 

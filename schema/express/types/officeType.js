@@ -1,3 +1,5 @@
+//typeDefs for Office Schema
+
 const typeDefs = `
 type Office {
   officeCode: String
@@ -16,20 +18,19 @@ type Query {
 }
 type Mutation {
   createOffice(
-    officeCode: Int, city: Int,
+    officeCode: String, city: String,
      phone: String,
      addressLine1: String,addressLine2: String,
      state: String,country: String,
      postalCode: String,territory: String
   ): Office
   updateOffice(
-    officeCode: Int, city: Int,
+    officeCode: String, city: String,
      phone: String,
      addressLine1: String,addressLine2: String,
      state: String,country: String,
      postalCode: String,territory: String): Office
   deleteOffice(officeCode: String): Office
-
 }
 
 schema {
@@ -37,5 +38,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs

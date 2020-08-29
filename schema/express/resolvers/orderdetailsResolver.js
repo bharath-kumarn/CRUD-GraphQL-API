@@ -1,7 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
-
 const db = new sqlite3.Database("./data.sqlite");
-
+//resolvers for Orderdetails Schema
 const resolvers = {
     Query: {
         orderdetails: (root, args, context) => {
@@ -13,10 +12,8 @@ const resolvers = {
                               }
                               resolve(rows);
                           });
-          });
-                      
-        },
-        
+          });                     
+        },       
     },
 
     Mutation: {
@@ -95,5 +92,4 @@ const resolvers = {
   
     }
   }
-
-  module.exports=resolvers
+module.exports=resolvers

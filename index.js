@@ -15,7 +15,7 @@ const host = '0.0.0.0';
 // const host = 'localhost';
 const port = process.env.PORT || 4001;
 
-
+//Different API endpints for eachs schema
 app.use("/graphql/customer", graphqlHTTP({ schema: customerSchema, graphiql: true}));
 app.use("/graphql/employee", graphqlHTTP({ schema: employeeSchema, graphiql: true}));
 app.use("/graphql/productline", graphqlHTTP({ schema: productlineSchema, graphiql: true}));

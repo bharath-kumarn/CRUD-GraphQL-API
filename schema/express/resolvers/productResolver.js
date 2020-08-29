@@ -1,7 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
-
 const db = new sqlite3.Database("./data.sqlite");
-
+//resolvers for Product Schema
 const resolvers = {
     Query: {
         products: (root, args, context) => {
@@ -99,9 +98,7 @@ const resolvers = {
                           });
                     });
       })
-    },
-  
+    }, 
     }
   }
-
-  module.exports=resolvers
+module.exports=resolvers

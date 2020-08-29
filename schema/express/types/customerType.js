@@ -1,3 +1,4 @@
+//typeDefs for Customer Schema
 const typeDefs = `
 type Customer {
   customerNumber: String
@@ -20,7 +21,7 @@ type Query {
 }
 type Mutation {
   createCustomer(
-    customerNumber: Int, salesRepEmployeeNumber: Int,
+    customerNumber: String, salesRepEmployeeNumber: String,
      phone: String, customerName: String,
      contactLastName: String,contactFirstName: String,
      addressLine1: String,addressLine2: String,
@@ -28,9 +29,15 @@ type Mutation {
      postalCode: String,country: String,
      creditLimit: String
   ): Customer
-  updateCustomer(customerNumber: Int, salesRepEmployeeNumber: Int, phone: String, customerName: String): Customer
+  updateCustomer(
+    customerNumber: String, salesRepEmployeeNumber: String,
+     phone: String, customerName: String,
+     contactLastName: String,contactFirstName: String,
+     addressLine1: String,addressLine2: String,
+     city: String,state: String,
+     postalCode: String,country: String,
+     creditLimit: String): Customer
   deleteCustomer(customerNumber: String): Customer
-
 }
 
 schema {
@@ -38,5 +45,4 @@ schema {
   mutation: Mutation
 }
 `
-
 module.exports=typeDefs
